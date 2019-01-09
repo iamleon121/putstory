@@ -8,12 +8,12 @@
 
 $d=$_COOKIE["d"];
 
-//echo $d;
 
 $pp=json_decode($d);
 
 echo $pp->NM;
-echo "ppp";
+echo $_SESSION["p"];
+echo $_COOKIE["a"];
 
 
 ?>

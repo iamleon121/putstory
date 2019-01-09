@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php setcookie("a", "aaa", time()+3600);?>
 <?php
 class PlayerJ{
 
@@ -30,7 +31,11 @@ $j=json_encode($p);
 
 $_SESSION['p']=$j;
 
+if(!isset($_SESSION['t']))
+  $_SESSION['t']=1;
+echo $_SESSION['t'];
+$_SESSION['t']=$_SESSION['t']+1;
 
 ?>
 
-<a href="./foo.php">foo</a>
+<a href="./foo.php?q=1">bar</a>
