@@ -3,14 +3,18 @@
 session_start();
 include 'playerclass.php';
 $textInBtn="开始新";
-
-if(isset($_SESSION['player'])){
+$restart="none";
+if($_GET['r']==1){
+    $_SESSION['player']="null";
+    setcookie("player", $_SESSION['player'], time()+3600*48);
+}
+if(isset($_SESSION['player'])&&($_SESSION['player']!="null")){
     $textInBtn="继续";
+    $restart="block";
 
-
-}elseif(isset($_COOKIE['player'])){
+}elseif(isset($_COOKIE['player'])&&($_SESSION['player']!="null")){
     $textInBtn="欢迎回来 继续";
-
+    $restart="block";
 
 }else{
 
@@ -18,11 +22,11 @@ if(isset($_SESSION['player'])){
 $player = new PlayerDEF;
 $playerjson = json_encode($player);
 $_SESSION['player']=$playerjson;
-
+setcookie("player", $_SESSION['player'], time()+3600*48);
 }
 
 
-setcookie("player", $_SESSION['player'], time()+3600*48);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +55,9 @@ setcookie("player", $_SESSION['player'], time()+3600*48);
   <p></p>
 </div>
 
-<div class="w3-container w3-center"><p></p><a class="w3-btn-block w3-teal w3-card-2 w3-xlarge w3-round" href="teller.php?ch=1&cl=1"><?php echo $textInBtn?>故事</a><p></p>
+<div class="w3-container w3-center"><p></p><a class="w3-btn-block w3-teal w3-card-2 w3-xlarge w3-round" href="teller.php"><?php echo $textInBtn?>故事</a>
+</div>
+<div class="w3-container w3-center" style="display:<?php echo $restart ?>"><p></p><a class="w3-btn-block w3-teal w3-card-2 w3-xlarge w3-round" href="?r=1">重新开始</a>
 </div>
 
 
