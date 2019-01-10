@@ -596,31 +596,71 @@ if($player!=null){
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
-          //$btnDisplay2="block";
-          $textInBtn1="剧终";
-          $btnLink1="/index.php?r=1";
-          //$textInBtn2="上床睡上一会";
-          //$audioLink="/sound/e01010601.mp3";
-          //if($player->AC[7])
-           // $audioLink="/sound/e01010202.mp3";
+          $dienum=rand(1,6);
+          if($dienum>=5){
+            $player->LO="e010110";
+            $player->EC[0]=1;
+            //$btnDisplay2="block";
+            $textInBtn1="和他一起回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011001.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }elseif($dienum>=3){
+            $player->LO="e010111";
+            
+            //$btnDisplay2="block";
+            $textInBtn1="和他一起回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011101.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }elseif($dienum>=1){
+            $player->LO="e010112";
+            $player->PC[4]=1;
+            //$btnDisplay2="block";
+            $textInBtn1="回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011201.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }
           break;
         case 2:
-          $player->LO="e010113"; //挑战随机分支
+          $player->PC[5]=1;
+          $dienum=rand(1,6);
+          if($dienum>=5)
+            $player->PS+1;
+          $dienum=$dienum+rand(1,6);
 
-          //$player->PS=$player->PS-1;
-          //if($player->PS&&$player->IN[5])
-          //$btnDisplay2="block";
-          $textInBtn1="你睡着了并做了一个梦";
-          //$textInBtn2="上床睡上一会";
-          $audioLink="/sound/e01011301.mp3";
-          //if($player->IN[1])
-            //$audioLink="/sound/e01010502.mp3";
-          //elseif($player->TE[2])
-            //$audioLink="/sound/e01010503.mp3";
-          //elseif($player->AC[7]&&$player->TE[2])
-            //$audioLink="/sound/e01010504.mp3";
-          
+          if($dienum>=5){
+            $player->LO="e010110";
+            $player->EC[0]=1;
+            //$btnDisplay2="block";
+            $textInBtn1="和他一起回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011002.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }elseif($dienum>=3){
+            $player->LO="e010111";
+            
+            //$btnDisplay2="block";
+            $textInBtn1="和他一起回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011102.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }elseif($dienum>=1){
+            $player->LO="e010112";
+            $player->PC[4]=1;
+            //$btnDisplay2="block";
+            $textInBtn1="回到办公室";
+           //$textInBtn2="上床睡上一会";
+           $audioLink="/sound/e01011202.mp3";
+           //if($player->AC[7])
+            // $audioLink="/sound/e01010202.mp3";
+          }
           break;
         /*case 3:
           $audioLink="/sound/e01010105.mp3";
