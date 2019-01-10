@@ -193,7 +193,7 @@ if($player!=null){
         case 1:
           $player->LO="e010104";
           $textInBtn1="原地不动看着他离开";
-          $textInBtn2="马上追上去拦住他";
+          $textInBtn2="喊下他让他别离开";
           $audioLink="/sound/e01010401.mp3";
           //if($player->AC[7])
            // $audioLink="/sound/e01010202.mp3";
@@ -1156,15 +1156,6 @@ if($player!=null){
   
   
   }
-
-  
-
-
-
-
-
-
-
 
 }
 
