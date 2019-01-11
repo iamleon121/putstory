@@ -49,9 +49,14 @@ if(isset($_SESSION['player'])&&($_SESSION['player']!="null")){
 }
 
 if($player!=null){
-  $player->CH=$ch;
-  $leadin=$player->LO;
-  
+  //$player->CH=$ch;
+  //$leadin=$player->LO;
+  if(isset($_GET[in]))
+    $leadin=$_GET['in'];
+  else
+     $leadin=$player->LO;
+  $player->LO=$leadin;
+  $leadout="";
   switch($leadin){
     
     case "begin":
@@ -65,15 +70,18 @@ if($player!=null){
       $textInBtn2="陷入开发困难";
       $textInBtn3="迷茫自己的未来";
       $textInBtn4="为自己所做的担惊受怕";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
-      $player->LO="e010100";
+      $leadout="e010100";
       }
       switch($ch){
-        case 1:         
+        case 1:
+          
           break;
+      }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
       }
       break;
     case "e010100":
@@ -89,12 +97,10 @@ if($player!=null){
       $textInBtn2="在网上仔细查找文字的含义";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      $leadout="e010101";
+      
       $player->PC[$ch-1]=1;
-      $player->LO="e010101";
+      
       }
       switch($ch){
         case 1:
@@ -118,6 +124,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010101":
       {
@@ -133,15 +145,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010102";
+          $leadout="e010102";
           $textInBtn1="不去理会那个人";
           $textInBtn2="认出了他并说服他进来";
           $audioLink="/sound/e01010201.mp3";
@@ -149,7 +158,7 @@ if($player!=null){
             $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010103";
+          $leadout="e010103";
           $player->PS=$player->PS-1;
           $textInBtn1="不去理会那个人";
           $textInBtn2="认出了他并说服他进来";
@@ -168,6 +177,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010102":
       {
@@ -183,15 +198,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010104";
+          $leadout="e010104";
           $textInBtn1="原地不动看着他离开";
           $textInBtn2="喊下他让他别离开";
           $audioLink="/sound/e01010401.mp3";
@@ -199,7 +211,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010105";
+          $leadout="e010105";
           $player->PS=$player->PS-1;
           $textInBtn1="看着他出门离开";
           $textInBtn2="让他把文件袋留下来";
@@ -222,6 +234,12 @@ if($player!=null){
           if($player->AC[7]==1)
             $audioLink="/sound/e01010108.mp3";
           break;*/
+      }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
       }
       break;
     case "e010103":
@@ -238,15 +256,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010104";
+          $leadout="e010104";
           $textInBtn1="原地不动看着他离开";
           $textInBtn2="马上叫他停下来";
           $audioLink="/sound/e01010401.mp3";
@@ -254,7 +269,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010105";
+          $leadout="e010105";
           $player->PS=$player->PS-1;
           $textInBtn1="看着他出门离开";
           $textInBtn2="让他把文件袋留下来";
@@ -278,6 +293,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010104":
       {
@@ -293,15 +314,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010106";
+          $leadout="e010106";
           $btnDisplay2="block";
           $textInBtn1="不打算睡觉了";
           $textInBtn2="上床睡上一会";
@@ -310,7 +328,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010107";
+          $leadout="e010107";
           $player->PS=$player->PS-1;
           if($player->PS&&$player->IN[5])
             $btnDisplay2="block";
@@ -336,6 +354,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010105":
       {
@@ -351,15 +375,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010106";
+          $leadout="e010106";
           $btnDisplay2="block";
           $textInBtn1="不打算睡觉了";
           $textInBtn2="上床睡上一会";
@@ -368,7 +389,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010108";
+          $leadout="e010108";
           $player->PS=$player->PS-1;
           //if($player->PS&&$player->IN[5])
           $btnDisplay2="block";
@@ -394,6 +415,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010106":
       {
@@ -409,15 +436,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
+          $leadout="begin";
           //$btnDisplay2="block";
           $textInBtn1="剧终";
           $btnLink1="/index.php?r=1";
@@ -427,7 +451,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010113"; //挑战随机分支
+          $leadout="e010113"; //挑战随机分支
 
           //$player->PS=$player->PS-1;
           //if($player->PS&&$player->IN[5])
@@ -454,6 +478,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010107":
       {
@@ -469,15 +499,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010106";
+          $leadout="e010106";
           $btnDisplay2="block";
           $textInBtn1="不打算睡觉了";
           $textInBtn2="上床睡上一会";
@@ -486,7 +513,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010109";
+          $leadout="e010109";
           $player->PS=$player->PS-1;
           //if($player->PS&&$player->IN[5])
           $btnDisplay2="block";
@@ -512,6 +539,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010108":
       {
@@ -527,15 +560,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
+          $leadout="begin";
           //$btnDisplay2="block";
           $textInBtn1="剧终";
           $btnLink1="/index.php?r=1";
@@ -545,7 +575,7 @@ if($player!=null){
            // $audioLink="/sound/e01010202.mp3";
           break;
         case 2:
-          $player->LO="e010113"; //挑战随机分支
+          $leadout="e010113"; //挑战随机分支
 
           //$player->PS=$player->PS-1;
           //if($player->PS&&$player->IN[5])
@@ -572,6 +602,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010109":
       //挑战!!挑战!!挑战!!
@@ -588,10 +624,7 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
@@ -601,7 +634,7 @@ if($player!=null){
             $dienum=rand(1,6);
           }
           if($dienum>=5){
-            $player->LO="e010110";
+            $leadout="e010110";
             $player->EC[0]=1;
             //$btnDisplay2="block";
             $textInBtn1="和他一起回到办公室";
@@ -610,7 +643,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=3){
-            $player->LO="e010111";
+            $leadout="e010111";
             
             //$btnDisplay2="block";
             $textInBtn1="和他一起回到办公室";
@@ -619,7 +652,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=1){
-            $player->LO="e010112";
+            $leadout="e010112";
             $player->PC[4]=1;
             //$btnDisplay2="block";
             $textInBtn1="回到办公室";
@@ -640,7 +673,7 @@ if($player!=null){
             $dienum=$dienum+rand(1,6);
           }
           if($dienum>=5){
-            $player->LO="e010110";
+            $leadout="e010110";
             $player->EC[0]=1;
             //$btnDisplay2="block";
             $textInBtn1="和他一起回到办公室";
@@ -649,7 +682,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=3){
-            $player->LO="e010111";
+            $leadout="e010111";
             
             //$btnDisplay2="block";
             $textInBtn1="和他一起回到办公室";
@@ -658,7 +691,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=1){
-            $player->LO="e010112";
+            $leadout="e010112";
             $player->PC[4]=1;
             //$btnDisplay2="block";
             $textInBtn1="回到办公室";
@@ -679,6 +712,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010110":
       {
@@ -694,15 +733,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010105";
+          $leadout="e010105";
           //$player->PS=$player->PS-1;
           $textInBtn1="看着他出门离开";
           $textInBtn2="让他把文件袋留下来";
@@ -740,6 +776,12 @@ if($player!=null){
           break;*/
       }
       break;
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
     case "e010111":
       {
       //$player->PS=$player->PS-1;
@@ -754,15 +796,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010105";
+          $leadout="e010105";
           //$player->PS=$player->PS-1;
           $textInBtn1="看着他出门离开";
           $textInBtn2="让他把文件袋留下来";
@@ -798,6 +837,12 @@ if($player!=null){
           if($player->AC[7]==1)
             $audioLink="/sound/e01010108.mp3";
           break;*/
+      }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
       }
       break;
     case "e010112":
@@ -814,15 +859,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="e010106";
+          $leadout="e010106";
           $btnDisplay2="block";
           $textInBtn1="不打算睡觉了";
           $textInBtn2="上床睡上一会";
@@ -857,6 +899,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010113":
       //挑战!!挑战!!挑战!!
@@ -873,10 +921,7 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
@@ -886,7 +931,7 @@ if($player!=null){
             $dienum=rand(1,6);
           }
           if($dienum>=5){
-            $player->LO="e010114";
+            $leadout="e010114";
             $player->EC[1]=1;
             //$btnDisplay2="block";
             $textInBtn1="惊醒过来";
@@ -895,7 +940,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=3){
-            $player->LO="e010115";
+            $leadout="e010115";
             
             //$btnDisplay2="block";
             $textInBtn1="惊醒过来";
@@ -904,7 +949,7 @@ if($player!=null){
            //if($player->AC[7])
             // $audioLink="/sound/e01010202.mp3";
           }elseif($dienum>=1){
-            $player->LO="e010116";
+            $leadout="e010116";
             $player->PC[8]=1;
             //$btnDisplay2="block";
             $textInBtn1="惊醒过来";
@@ -964,6 +1009,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010114":
       {
@@ -979,15 +1030,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
+          $leadout="begin";
           //$btnDisplay2="block";
           $textInBtn1="剧终";
           $btnLink1="/index.php?r=1";
@@ -1024,6 +1072,12 @@ if($player!=null){
             $audioLink="/sound/e01010108.mp3";
           break;*/
       }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
+      }
       break;
     case "e010115":
       {
@@ -1039,15 +1093,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
+          $leadout="begin";
           //$btnDisplay2="block";
           $textInBtn1="剧终";
           $btnLink1="/index.php?r=1";
@@ -1083,6 +1134,12 @@ if($player!=null){
           if($player->AC[7]==1)
             $audioLink="/sound/e01010108.mp3";
           break;*/
+      }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
       }
       break;
     case "e010116":
@@ -1099,15 +1156,12 @@ if($player!=null){
       //$textInBtn2="认出了他并说服他进来";
       $textInBtn3="";
       $textInBtn4="";
-      $btnLink1="?ch=1";
-      $btnLink2="?ch=2";
-      $btnLink3="?ch=3";
-      $btnLink4="?ch=4";
+      
       //$player->LO="e010102";
       }
       switch($ch){
         case 1:
-          $player->LO="begin";
+          $leadout="begin";
           //$btnDisplay2="block";
           $textInBtn1="剧终";
           $btnLink1="/index.php?r=1";
@@ -1143,6 +1197,12 @@ if($player!=null){
           if($player->AC[7]==1)
             $audioLink="/sound/e01010108.mp3";
           break;*/
+      }
+      {
+      $btnLink1="?in=$leadout&ch=1";
+      $btnLink2="?in=$leadout&ch=2";
+      $btnLink3="?in=$leadout&ch=3";
+      $btnLink4="?in=$leadout&ch=4";
       }
       break;
 
