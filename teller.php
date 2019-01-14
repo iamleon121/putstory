@@ -703,8 +703,8 @@ if($player!=null){
           }
           if($dienum>=5){
             $leadout="e010114";
-            $player->EC[1]=1;
-           
+            $player->PS+1;
+            
             $textInBtn1="惊醒过来";
            
            $audioLink="/sound/e01011401.mp3";
