@@ -14,7 +14,7 @@ class PlayerBLK{
   var $PC;
   var $LO;
   var $CH;
- // var $LL;
+  var $LL;
 
   function __construct( $par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8, $par9, $par10, $par11, $par12) {
    
@@ -31,7 +31,7 @@ class PlayerBLK{
    $this->PC = $par10;
    $this->LO = $par11;
    $this->CH = $par12;
-  // $this->LL = 0;
+   $this->LL = 0;
   }
 }
 
@@ -50,7 +50,7 @@ class PlayerDEF{
   var $PC=array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
   var $LO="begin";
   var $CH=1;
-  //var $LL=0;
+  var $LL=0;
 
 }
 
