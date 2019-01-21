@@ -235,7 +235,7 @@ break;
 //第二章 第二章 第二章 第二章 第二章 第二章
 
 case "e010201":
-$audioLink="/sound/e01020202.mp3";
+$audioLink="/sound/e01020102.mp3";
 $btnDisplay1="block";
 if($player->PS>0)
 $btnDisplay2="block";
