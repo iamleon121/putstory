@@ -238,8 +238,120 @@ break;
 
 //第二章 第二章 第二章 第二章 第二章 第二章
 
+case "e010201":
+$audioLink="/sound/e01020101.mp3";
+if($player->IN[2])
+$audioLink="/sound/e01020202.mp3";
+$btnDisplay1="block";
+if($player->PS>0&&$player->IN[4])
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听她继续说下去";
+$textInBtn2="说服让她留下预付金";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010202":
+$audioLink="/sound/e01020201.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听她继续说下去";
+$textInBtn2="表示希望她能说明白情况";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010203":
+$audioLink="/sound/e01020301.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听她继续说下去";
+$textInBtn2="表示希望她能说明白情况";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010204":
+$audioLink="/sound/e01020401.mp3";
+if($player->AC[9])
+$audioLink="/sound/e01020402.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="仔细回想一下当时的情景";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010205":
+$audioLink="/sound/e01020501.mp3";
+if($player->AC[9])
+$audioLink="/sound/e01020502.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="仔细回想一下当时的情景";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010206":
+$audioLink="/sound/e01020601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="出去想办法拿回算法备份";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010207":
+$audioLink="/sound/e01020701.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="出去想办法拿回算法备份";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010208":
+$audioLink="/sound/e01020801.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="出去想办法拿回算法备份";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//第三章 第三章 第三章 第三章 第三章 第三章
 
 
 

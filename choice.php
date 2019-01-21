@@ -232,6 +232,7 @@
       else
         $dienum=$player->LL;
       if($dienum>=5){
+        $player->EC[1]=1;
         if($PSM)
           $player->PS=$player->PS+1;
         scene("e010114");
@@ -240,7 +241,7 @@
       }elseif($dienum>=1){
         $player->PC[8]=1;
         if($PSM)
-          $player->PS=$player->PS-1;
+          $player->PS=$player->PS-2;
         scene("e010116");
       }
       }
@@ -270,12 +271,138 @@
       }
       break;
 
+    //第二章 第二章 第二章 第二章 第二章 第二章
 
-    //第二章 第二章 第二章 第二章 第二章 第二章 
+    case "e010201":
+      switch($ch){
+        case 1:
+          scene("e010202");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->EC[2];
+          if($PSM)
+            $player->PS=$player->PS+1;
+          scene("e010103");
+          break;
+      }
+      break;
+
+    case "e010202":
+      switch($ch){
+        case 1:
+          scene("e010204");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010105");
+          break;
+      }
+      break;
   
+    case "e010203":
+      switch($ch){
+        case 1:
+          scene("e010204");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010105");
+          break;
+      }
+      break;
   
-  
-  
+    case "e010204":
+      //挑战!!挑战!!挑战!!
+      switch($ch){
+        case 1:
+          $dienum=0;
+          if($player->ME[0]){
+            $dienum=rand(1,6);
+          }
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=5){
+        $player->EC[3]=1;
+        if($PSM)
+          $player->PS=$player->PS+1;
+        scene("e010206");
+      }elseif($dienum>=3){
+        scene("e010207");
+      }elseif($dienum>=1){
+        $player->PC[6]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e0100208");
+      }
+      }
+      break;
+
+      case "e010205":
+      //挑战!!挑战!!挑战!!
+      switch($ch){
+        case 1:
+          $dienum=0;
+          if($player->ME[0]){
+            $dienum=rand(1,6);
+          }
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=5){
+        $player->EC[3]=1;
+        if($PSM)
+          $player->PS=$player->PS+1;
+        scene("e010206");
+      }elseif($dienum>=3){
+        scene("e010207");
+      }elseif($dienum>=1){
+        $player->PC[6]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e0100208");
+      }
+      }
+      break;
+
+    case "e010206":
+      switch($ch){
+        case 1:
+          scene("e010301");
+          break;
+      }
+      break;
+
+    case "e010207":
+      switch($ch){
+        case 1:
+          scene("e010301");
+          break;
+      }
+      break;
+
+    case "e010208":
+      switch($ch){
+        case 1:
+          scene("e010301");
+          break;
+      }
+      break;
+
+    //第三章 第三章 第三章 第三章 第三章 第三章 
+
   
   
   
