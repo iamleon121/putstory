@@ -269,7 +269,7 @@
           $player->EC[2]=1;
           if($PSM)
             $player->PS=$player->PS+1;
-          scene("e010103");
+          scene("e010203");
           break;
       }
       break;
@@ -282,7 +282,7 @@
         case 2:
           if($PSM)
             $player->PS=$player->PS-1;
-          scene("e010105");
+          scene("e010205");
           break;
       }
       break;
@@ -295,7 +295,7 @@
         case 2:
           if($PSM)
             $player->PS=$player->PS-1;
-          scene("e010105");
+          scene("e010205");
           break;
       }
       break;
@@ -353,7 +353,7 @@
         $player->PC[6]=1;
         if($PSM)
           $player->PS=$player->PS-1;
-        scene("e0100208");
+        scene("e010208");
       }
       }
       break;
