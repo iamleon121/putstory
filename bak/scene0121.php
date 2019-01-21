@@ -27,9 +27,11 @@ case "e010101":
 break;
 
 case "e010102":
+$audioLink="/sound/e01010201.mp3";
+if($player->AC[7])
 $audioLink="/sound/e01010202.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[5])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -41,9 +43,11 @@ $leadout=$id;
 break;
 
 case "e010103":
+$audioLink="/sound/e01010301.mp3";
+if($player->AC[7])
 $audioLink="/sound/e01010302.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[5])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -57,7 +61,7 @@ break;
 case "e010104":
 $audioLink="/sound/e01010401.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[5])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -69,9 +73,15 @@ $leadout=$id;
 break;
 
 case "e010105":
+$audioLink="/sound/e01010501.mp3";
+if($player->IN[1])
+$audioLink="/sound/e01010502.mp3";
+if($player->TE[2])
+$audioLink="/sound/e01010503.mp3";
+if($player->AC[7]&&$player->TE[2])
 $audioLink="/sound/e01010504.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[5])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -98,7 +108,7 @@ break;
 case "e010107":
 $audioLink="/sound/e01010701.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[5])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -235,9 +245,11 @@ break;
 //第二章 第二章 第二章 第二章 第二章 第二章
 
 case "e010201":
+$audioLink="/sound/e01020101.mp3";
+if($player->IN[2])
 $audioLink="/sound/e01020202.mp3";
 $btnDisplay1="block";
-if($player->PS>0)
+if($player->PS>0&&$player->IN[4])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
@@ -277,6 +289,8 @@ $leadout=$id;
 break;
 
 case "e010204":
+$audioLink="/sound/e01020401.mp3";
+if($player->AC[9])
 $audioLink="/sound/e01020402.mp3";
 $btnDisplay1="block";
 $btnDisplay2="none";
@@ -290,6 +304,8 @@ $leadout=$id;
 break;
 
 case "e010205":
+$audioLink="/sound/e01020501.mp3";
+if($player->AC[9])
 $audioLink="/sound/e01020502.mp3";
 $btnDisplay1="block";
 $btnDisplay2="none";
@@ -344,6 +360,14 @@ break;
 //第三章 第三章 第三章 第三章 第三章 第三章
 
 case "e010301":
+$audioLink="/sound/e01030101.mp3";
+if($player->IN[1]||$player->AC[9])
+$audioLink="/sound/e01030102.mp3";
+if($player->IN[1]||$player->AC[9]&&$player->TE[2])
+$audioLink="/sound/e01030103.mp3";
+if($player->IN[1]||$player->AC[9]&&$player->AC[3])
+$audioLink="/sound/e01030104.mp3";
+if($player->IN[1]||$player->AC[9]&&$player->TE[2]&&$player->AC[3])
 $audioLink="/sound/e01030105.mp3";
 $btnDisplay1="block";
 $btnDisplay2="none";
@@ -355,346 +379,6 @@ $textInBtn3="";
 $textInBtn4="";
 $leadout=$id;
 break;
-
-case "e010302":
-$audioLink="/sound/e01030201.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="介绍自己的身份";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010303":
-$audioLink="/sound/e01030301.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="进入雷琳博士的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010304":
-$audioLink="/sound/e01030401.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="趁机溜进研究机构里面";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010305":
-$audioLink="/sound/e01030501.mp3";
-$btnDisplay1="block";
-if($player->PS>0)
-$btnDisplay2="block";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="趁机溜进研究机构里面";
-$textInBtn2="大声向他提起你的名字";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010306":
-$audioLink="/sound/e01030601.mp3";
-$btnDisplay1="block";
-$btnDisplay2="block";
-if($player->PS>0)
-$btnDisplay3="block";
-$btnDisplay4="none";
-$textInBtn1="趁保安转过身悄悄进去";
-$textInBtn2="趁保安转过身快步溜进去";
-$textInBtn3="趁保安转过身迅速跑过去";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010307":
-$audioLink="/sound/e01030701.mp3";
-if($player->PC[7])
-$audioLink="/sound/e01030702.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="进入雷琳博士的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010308":
-$audioLink="/sound/e01030807.mp3";
-$btnDisplay1="block";
-if($player->PS>0||$player->EC[3])
-$btnDisplay2="block";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="趁机溜进研究机构里面";
-$textInBtn2="大声向他提起你的名字";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010309":
-$audioLink="/sound/e01030901.mp3";
-if($player->PC[7])
-$audioLink="/sound/e01030902.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="在研究机构附近转一转";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010310":
-$audioLink="/sound/e01031001.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="开门进入办公室中";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010311":
-$audioLink="/sound/e01031107.mp3";
-$btnDisplay1="block";
-if($player->PS>0&&$player->EC[4])
-$btnDisplay2="block";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="打开办公电脑查找代码";
-$textInBtn2="用破解程序在电脑上查找代码";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010312":
-$audioLink="/sound/e01031201.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="返回自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010313":
-$audioLink="/sound/e01031301.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="迅速从窗口跳出去了";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010314":
-$audioLink="/sound/e01031401.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="返回自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010315":
-$audioLink="/sound/e01031501.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="返回自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010316":
-$audioLink="/sound/e01031601.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="返回自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010317":
-$audioLink="/sound/e01031701.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="返回自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010318":
-$audioLink="/sound/e01031801.mp3";
-$btnDisplay1="block";
-if($player->PS>0&&$player->EC[4])
-$btnDisplay2="block";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="打开办公电脑查找代码";
-$textInBtn2="用破解程序在电脑上查找代码";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010319":
-$audioLink="/sound/e01031901.mp3";
-$btnDisplay1="block";
-if($player->PS>0)
-$btnDisplay2="block";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="随便编套说辞搪塞过去";
-$textInBtn2="认真思考一段假话隐瞒目的";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010320":
-$audioLink="/sound/e01032001.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="请求雷琳博士交给你代码副本";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010321":
-$audioLink="/sound/e01032101.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="请求雷琳博士交给你代码副本";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010322":
-$audioLink="/sound/e01032201.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="请求雷琳博士交给你代码副本";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010323":
-$audioLink="/sound/e01032301.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="回到自己的办公室";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-//第四章 第四章 第四章 第四章 第四章 第四章
-
-case "e010401":
-$audioLink="/sound/e01040101.mp3";
-if($player->PC[18])
-$audioLink="/sound/e01040102.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="去往标注的秘密地址";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-case "e010402":
-$audioLink="/sound/e01040202.mp3";
-$btnDisplay1="block";
-$btnDisplay2="none";
-$btnDisplay3="none";
-$btnDisplay4="none";
-$textInBtn1="躲到一边让罗科进来";
-$textInBtn2="";
-$textInBtn3="";
-$textInBtn4="";
-$leadout=$id;
-break;
-
-//第五章 第五章 第五章 第五章 第五章 第五章 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
