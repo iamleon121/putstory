@@ -445,8 +445,8 @@ if($player->PS>0||$player->EC[3])
 $btnDisplay2="block";
 $btnDisplay3="none";
 $btnDisplay4="none";
-$textInBtn1="趁机溜进研究机构里面";
-$textInBtn2="大声向他提起你的名字";
+$textInBtn1="告诉她是曾经的合作伙伴";
+$textInBtn2="仔细告诉她你的身份";
 $textInBtn3="";
 $textInBtn4="";
 $leadout=$id;
