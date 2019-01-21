@@ -682,7 +682,187 @@ $textInBtn4="";
 $leadout=$id;
 break;
 
-//第五章 第五章 第五章 第五章 第五章 第五章 
+//第五章 第五章 第五章 第五章 第五章 第五章
+
+case "e010501":
+$audioLink="/sound/e01050101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="假意说只是做客马上离开";
+$textInBtn2="告诉他是雷琳博士派他来的";
+$textInBtn3="骗他说你是这里的住客";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010502":
+$audioLink="/sound/e01050201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="边说着假话边向门外走去";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010503":
+$audioLink="/sound/e01050301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="在一边听罗科和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010504":
+$audioLink="/sound/e01050401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="在一边听罗科和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010505":
+$audioLink="/sound/e01050501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="在门外听罗科和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010506":
+$audioLink="/sound/e01050601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="挣脱打手的控制";
+$textInBtn2="回击控制你的打手";
+$textInBtn3="全力反抗控制你的打手";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010507":
+$audioLink="/sound/e01050701.mp3";
+if($player->PC[11])
+$audioLink="/sound/e01050702.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="擦擦脸上的痕迹和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010508":
+$audioLink="/sound/e01050801.mp3";
+if($player->PC[11])
+$audioLink="/sound/e01050802.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="清理下脸上的伤和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010509":
+$audioLink="/sound/e01050901.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="来到莫的旁边和莫说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010510":
+$audioLink="/sound/e01051001.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听陈讲之前的事情";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//第六章 第六章 第六章 第六章 第六章 第六章
+
+case "e010601":
+$audioLink="/sound/e01060101.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听陈继续说下去";
+$textInBtn2="对陈说些安慰同情的话";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010602":
+$audioLink="/sound/e01060201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="离开去你朋友的家";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010603":
+$audioLink="/sound/e01060301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="离开去你朋友的家";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//第七章 第七章 第七章 第七章 第七章 第七章
 
 
 

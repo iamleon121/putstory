@@ -776,7 +776,197 @@
       }
       break;
     //第五章 第五章 第五章 第五章 第五章 第五章
+    case "e010501":
+      switch($ch){
+        case 1:
+          scene("e010502");
+          break;
+        case 2:
+          scene("e010503");
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010504");
+          break;
+      }
+      break;
 
+    case "e010502":
+      //挑战!!挑战!!挑战!!
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=3){
+        scene("e010505");
+      }elseif($dienum>=1){
+        scene("e010506");
+      }
+      }
+      break;
+
+    case "e010503":
+      switch($ch){
+        case 1:
+          scene("e010509");
+          break;
+       
+      }
+      break;
+
+    case "e010504":
+      switch($ch){
+        case 1:
+          scene("e010509");
+          break;
+       
+      }
+      break;
+
+    case "e010505":
+      switch($ch){
+        case 1:
+          scene("e010509");
+          break;
+       
+      }
+      break;
+
+    case "e010506":
+      //挑战!!挑战!!挑战!!
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($player->PS>0){
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }else{
+          $player->PC[11]=1;
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->PC[11]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+2;
+          $dienum=$dienum+rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=5){
+        $player->EC[6]=1;
+        if($PSM)
+          $player->PS=$player->PS+1;
+        scene("e010507");
+      }elseif($dienum>=1){
+        $player->PC[10]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e010508");
+      }
+      }
+      break;
+
+    case "e010507":
+      switch($ch){
+        case 1:
+          scene("e010510");
+          break;
+       
+      }
+      break;
+
+    case "e010508":
+      switch($ch){
+        case 1:
+          scene("e010510");
+          break;
+       
+      }
+      break;
+
+    case "e010509":
+      switch($ch){
+        case 1:
+          scene("e010510");
+          break;
+       
+      }
+      break;
+
+    case "e010510":
+      switch($ch){
+        case 1:
+          scene("e010601");
+          break;
+       
+      }
+      break;
+    //第六章 第六章 第六章 第六章 第六章 第六章
+    case "e010601":
+      switch($ch){
+        case 1:
+          scene("e010602");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010603");
+          break;
+      }
+      break;
+
+    case "e010602":
+      switch($ch){
+        case 1:
+          scene("e010701");
+          break;
+       
+      }
+      break;
+
+    case "e010603":
+      switch($ch){
+        case 1:
+          scene("e010701");
+          break;
+       
+      }
+      break;
+    //第七章 第七章 第七章 第七章 第七章 第七章
   
   
   
