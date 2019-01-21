@@ -864,22 +864,774 @@ break;
 
 //第七章 第七章 第七章 第七章 第七章 第七章
 
+case "e010701":
+$audioLink="/sound/e01070101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="你推开门走了进去";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010702":
+$audioLink="/sound/e01070201.mp3";
+if($player->EC[6])
+$audioLink="/sound/e01070202.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="让他好好休息后离开";
+$textInBtn2="告诉他不是他的错";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010703":
+$audioLink="/sound/e01070301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="躲到一边招架";
+$textInBtn2="抬手大力还击";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010704":
+$audioLink="/sound/e01070401.mp3";
+if($player->PC[15])
+$audioLink="/sound/e01070402.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="和你的朋友说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010705":
+$audioLink="/sound/e01070501.mp3";
+if($player->PC[15])
+$audioLink="/sound/e01070502.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="和你的朋友说话";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010706":
+$audioLink="/sound/e01070601.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="让他好好休息后离开";
+$textInBtn2="告诉大刘关于算法的事情";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010707":
+$audioLink="/sound/e01070701.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="让他好好休息后离开";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+//第八章 第八章 第八章 第八章 第八章 第八章
 
+case "e010801":
+$audioLink="/sound/e01080101.mp3";
+if($player->PC[18])
+$audioLink="/sound/e01080102.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="听他说关于雷琳博士的事情";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010802":
+$audioLink="/sound/e01080202.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="告诉艾文先生很快把算法交给他";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010803":
+$audioLink="/sound/e01080301.mp3";
+if($player->PC[18])
+$audioLink="/sound/e01080302.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+//第九章 第九章 第九章 第九章 第九章 第九章
 
+case "e010901":
+$audioLink="/sound/e01090101.mp3";
+if($player->PC[18])
+$audioLink="/sound/e01090102.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="试图关闭算法程序的命令行";
+$textInBtn2="立刻运行一个终止算法函数";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010902":
+$audioLink="/sound/e01090201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010903":
+$audioLink="/sound/e01090301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010904":
+$audioLink="/sound/e01090401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="上前帮兰茜一起开门";
+$textInBtn2="阻止艾文先生对兰茜的攻击";
+$textInBtn3="拿出携带的甩棍制服艾文先生";
+$textInBtn4="";
+$leadout=$id;
+break;
 
+case "e010905":
+$audioLink="/sound/e01090501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010906":
+$audioLink="/sound/e01090601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e010907":
+$audioLink="/sound/e01090701.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//第十章 第十章 第十章 第十章 第十章 第十章
+
+case "e011001":
+$audioLink="/sound/e01100101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="来到办公室附近的公园见莫";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011002":
+$audioLink="/sound/e01100202.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到办公室联系雷琳博士";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011003":
+$audioLink="/sound/e01100301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="来到雷琳博士的研究机构";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011004":
+$audioLink="/sound/e01100401.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="看着莫离开研究机构";
+$textInBtn2="试图挽留莫别离开";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011005":
+$audioLink="/sound/e01100501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011006":
+$audioLink="/sound/e01100601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="不去干预实验过程";
+$textInBtn2="要求雷琳博士停止实验";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011007":
+$audioLink="/sound/e01100702.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011008":
+$audioLink="/sound/e01100801.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="回到自己的办公室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//十一章 十一章 十一章 十一章 十一章 十一章 
+
+case "e011101":
+$audioLink="/sound/e01110102.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尝试着输入密码打开房门";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011102":
+$audioLink="/sound/e01110201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="不去管他继续往前走";
+$textInBtn2="进去把他救下来";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011103":
+$audioLink="/sound/e01110301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="你和大刘迅速的藏到一边";
+$textInBtn2="你捡起产品和大刘藏到一边";
+$textInBtn3="你准备好了短棍藏到一边";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011104":
+$audioLink="/sound/e01110401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尝试着输入密码打开房门";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011105":
+$audioLink="/sound/e01110501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尝试着输入密码打开房门";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011106":
+$audioLink="/sound/e01110601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尝试着输入密码打开房门";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011107":
+$audioLink="/sound/e01110701.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="你惊慌失措跑了起来";
+$textInBtn2="你摘下口罩试图让他认出你";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011108":
+$audioLink="/sound/e01110801.mp3";
+$btnDisplay1="block";
+if($player->PS>0)
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="你躲在了房间的门边";
+$textInBtn2="你赶紧把房门给轻轻关上了";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011109":
+$audioLink="/sound/e01110901.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="离开大崔回到走廊";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011110":
+$audioLink="/sound/e01111001.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="在走廊上继续往里面走";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011111":
+$audioLink="/sound/e01111101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="跟着助手往实验室走去";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e01112":
+$audioLink="/sound/e01111201.mp3";
+if($player->EC[9])
+$audioLink="/sound/e01111202.mp3";
+if($player->EC[10])
+$audioLink="/sound/e01111203.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="快步跑出了实验室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011113":
+$audioLink="/sound/e01111301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="快步跑出了实验室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011114":
+$audioLink="/sound/e01111401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="一瘸一拐的跑出实验室";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011115":
+$audioLink="/sound/e01111501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="站在一边看着这一切";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+//十二章 十二章 十二章 十二章 十二章 十二章
+
+case "e011201":
+$audioLink="/sound/e01120101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="捡起枪交给罗科";
+$textInBtn2="不去把枪捡起来";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011202":
+$audioLink="/sound/e01120201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="把枪直接丢到罗科那里";
+$textInBtn2="把枪直接交到罗科的手里";
+$textInBtn3="把枪上膛交到罗科的手里";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011203":
+$audioLink="/sound/e01120301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="赶紧朝向门外跑去";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011204":
+$audioLink="/sound/e01120401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="查看现在的情况";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011205":
+$audioLink="/sound/e01120501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="查看现在的情况";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011206":
+$audioLink="/sound/e01120601.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="赶紧朝向门外跑去";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011207":
+$audioLink="/sound/e01120701.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尾声";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011208":
+$audioLink="/sound/e01120801.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尾声";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011209":
+$audioLink="/sound/e01120901.mp3";
+$btnDisplay1="block";
+$btnDisplay2="block";
+if($player->PS>0)
+$btnDisplay3="block";
+$btnDisplay4="none";
+$textInBtn1="喊着莫的名";
+$textInBtn2="喊着让莫快醒醒";
+$textInBtn3="喊着让莫别被控制";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011210":
+$audioLink="/sound/e01121001.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="查看周围的情况";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011211":
+$audioLink="/sound/e01121101.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="查看周围的情况";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011212":
+$audioLink="/sound/e01121201.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="查看周围的情况";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011213":
+$audioLink="/sound/e01121301.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尾声";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011214":
+$audioLink="/sound/e01121401.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尾声";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "e011215":
+$audioLink="/sound/e01121501.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="尾声";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
+
+case "end":
+if($player->EC[11]||$player->EC[12])
+$audioLink="/sound/e01end01.mp3";
+elseif($player->PC[17])
+$audioLink="/sound/e01end02.mp3";
+else
+$audioLink="/sound/e01end03.mp3";
+$btnDisplay1="block";
+$btnDisplay2="none";
+$btnDisplay3="none";
+$btnDisplay4="none";
+$textInBtn1="故事结束 感谢您的收听";
+$textInBtn2="";
+$textInBtn3="";
+$textInBtn4="";
+$leadout=$id;
+break;
 
 
 

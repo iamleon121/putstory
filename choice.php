@@ -138,9 +138,8 @@
           break;
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010109":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -203,9 +202,8 @@
           break;
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010113":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -299,9 +297,8 @@
           break;
       }
       break;
-  
+    //挑战!!挑战!!挑战!!  
     case "e010204":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -328,9 +325,8 @@
       }
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010205":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -431,9 +427,8 @@
           break;
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010306":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -534,9 +529,8 @@
        
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010311":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -582,9 +576,8 @@
        
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010313":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -644,9 +637,8 @@
        
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010318":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -683,9 +675,8 @@
       }
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010319":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -791,9 +782,8 @@
           break;
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010502":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -839,9 +829,8 @@
        
       }
       break;
-
+    //挑战!!挑战!!挑战!!
     case "e010506":
-      //挑战!!挑战!!挑战!!
       switch($ch){
         case 1:
           $dienum=0;
@@ -967,11 +956,865 @@
       }
       break;
     //第七章 第七章 第七章 第七章 第七章 第七章
-  
-  
-  
-  
-  
+    case "e010701":
+      switch($ch){
+        case 1:
+          if($player->EC[6])
+            scene("e010702");
+          else
+            scene("e010703");
+          break;
+       
+      }
+      break;
+
+    case "e010702":
+      switch($ch){
+        case 1:
+          scene("e010801");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010702");
+          break;
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e010703":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          $player->PC[15]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=3)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=3){
+        scene("e010704");
+      }elseif($dienum>=1){
+        $player->PC[5]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e010705");
+      }
+      }
+      break;
+
+    case "e010704":
+      switch($ch){
+        case 1:
+          scene("e010702");
+          break;
+       
+      }
+      break;
+
+    case "e010705":
+      switch($ch){
+        case 1:
+          scene("e010702");
+          break;
+       
+      }
+      break;
+
+    case "e010706":
+      switch($ch){
+        case 1:
+          scene("e010801");
+          break;
+        case 2:
+          $player->EC[8]=1;
+          if($PSM)
+            $player->PS=$player->PS+2;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e010707");
+          break;
+      }
+      break;
+
+    case "e010707":
+      switch($ch){
+        case 1:
+          scene("e010801");
+          break;
+       
+      }
+      break;
+    //第八章 第八章 第八章 第八章 第八章 第八章
+    case "e010801":
+      switch($ch){
+        case 1:
+          scene("e010802");
+          break;
+       
+      }
+      break;
+
+    case "e010802":
+      switch($ch){
+        case 1:
+          scene("e010803");
+          break;
+       
+      }
+      break;
+
+    case "e010803":
+      switch($ch){
+        case 1:
+          scene("e010901");
+          break;
+       
+      }
+      break;
+    //第九章 第九章 第九章 第九章 第九章 第九章
+    //挑战!!挑战!!挑战!!
+    case "e010901":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[8]=1;
+        if($PSM)
+          $player->PS=$player->PS+2;
+        scene("e010902");
+      }elseif($dienum>=4){
+        scene("e010903");
+      }elseif($dienum>=1){
+        scene("e010904");
+      }
+      }
+      break;
+
+    case "e010902":
+      switch($ch){
+        case 1:
+          scene("e011001");
+          break;
+       
+      }
+      break;
+
+    case "e010903":
+      switch($ch){
+        case 1:
+          scene("e011001");
+          break;
+       
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e010904":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($player->PS>0){
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }else{
+          $player->PC[13]=1;
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->PC[13]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+2;
+          $dienum=$dienum+rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[8]=1;
+        if($PSM)
+          $player->PS=$player->PS+2;
+        scene("e010905");
+      }elseif($dienum>=3){
+        scene("e010906");
+      }elseif($dienum>=1){
+        $player->PC[12]=1;
+        if($PSM)
+          $player->PS=$player->PS-2;
+        scene("e010907");
+      }
+      }
+      break;
+
+    case "e010905":
+      switch($ch){
+        case 1:
+          scene("e011001");
+          break;
+       
+      }
+      break;
+
+    case "e010906":
+      switch($ch){
+        case 1:
+          scene("e011001");
+          break;
+       
+      }
+      break;
+
+    case "e010907":
+      switch($ch){
+        case 1:
+          scene("e011001");
+          break;
+       
+      }
+      break;
+    //第十章 第十章 第十章 第十章 第十章 第十章
+    case "e011001":
+      switch($ch){
+        case 1:
+          scene("e011002");
+          break;
+       
+      }
+      break;
+
+    case "e011002":
+      switch($ch){
+        case 1:
+          scene("e011003");
+          break;
+       
+      }
+      break;
+
+    case "e011003":
+      switch($ch){
+        case 1:
+          scene("e011004");
+          break;
+       
+      }
+      break;
+
+    case "e011004":
+      switch($ch){
+        case 1:
+          scene("e011005");
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          scene("e011006");
+          break;
+      }
+      break;
+
+    case "e011005":
+      switch($ch){
+        case 1:
+          scene("e011101");
+          break;
+       
+      }
+      break;
+
+    case "e011006":
+      switch($ch){
+        case 1:
+          scene("e011007");
+          break;
+        case 2:
+          scene("e011008");
+          break;
+      }
+      break;
+
+    case "e011007":
+      switch($ch){
+        case 1:
+          scene("e011101");
+          break;
+       
+      }
+      break;
+
+    case "e011008":
+      switch($ch){
+        case 1:
+          scene("e011101");
+          break;
+       
+      }
+      break;
+    //十一章 十一章 十一章 十一章 十一章 十一章
+    case "e011101":
+      switch($ch){
+        case 1:
+          if($player->PC[6]==0&&$player->PC[10]==0)
+            scene("e011102");
+          else
+            scene("e011103");
+          break;
+       
+      }
+      break;
+
+    case "e011102":
+      switch($ch){
+        case 1:
+          scene("e011107");
+          break;
+        case 2:
+          scene("e011108");
+          break;
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e011103":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($player->PS>0){
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }else{
+          $player->PC[15]=1;
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->PC[15]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+2;
+          $dienum=$dienum+rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[9]=1;
+        if($PSM)
+          $player->PS=$player->PS+1;
+        scene("e011104");
+      }elseif($dienum>=4){
+        scene("e011105");
+      }elseif($dienum>=1){
+        $player->PC[14]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e011106");
+      }
+      }
+      break;
+
+    case "e011104":
+      switch($ch){
+        case 1:
+          scene("e011102");
+          break;
+       
+      }
+      break;
+
+    case "e011105":
+      switch($ch){
+        case 1:
+          scene("e011102");
+          break;
+       
+      }
+      break;
+
+    case "e011106":
+      switch($ch){
+        case 1:
+          scene("e011102");
+          break;
+       
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e011107":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[8]=1;
+        if($PSM)
+          $player->PS=$player->PS+2;
+        scene("e011112");
+      }elseif($dienum>=4){
+        scene("e011113");
+      }elseif($dienum>=1){
+        $player->PC[16]=1;
+        if($PSM)
+          $player->PS=$player->PS-2;
+        scene("e011114");
+      }
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e011108":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[10]=1;
+        if($PSM)
+          $player->PS=$player->PS+1;
+        scene("e011109");
+      }elseif($dienum>=4){
+        scene("e011110");
+      }elseif($dienum>=1){
+        $player->PC[15]=1;
+        if($PSM)
+          $player->PS=$player->PS-1;
+        scene("e011111");
+      }
+      }
+      break;
+
+    case "e011109":
+      switch($ch){
+        case 1:
+          scene("e011107");
+          break;
+       
+      }
+      break;
+
+    case "e011110":
+      switch($ch){
+        case 1:
+          scene("e011107");
+          break;
+       
+      }
+      break;
+
+    case "e011111":
+      switch($ch){
+        case 1:
+          scene("e011107");
+          break;
+       
+      }
+      break;
+
+    case "e011112":
+      switch($ch){
+        case 1:
+          scene("e011115");
+          break;
+       
+      }
+      break;
+
+    case "e011113":
+      switch($ch){
+        case 1:
+          scene("e011115");
+          break;
+       
+      }
+      break;
+
+    case "e011114":
+      switch($ch){
+        case 1:
+          scene("e011115");
+          break;
+       
+      }
+      break;
+
+    case "e011115":
+      switch($ch){
+        case 1:
+          scene("e011201");
+          break;
+       
+      }
+      break;
+
+
+    //十二章 十二章 十二章 十二章 十二章 十二章
+    case "e011201":
+      switch($ch){
+        case 1:
+          scene("e011202");
+          break;
+        case 2:
+          scene("e011203");
+          break;
+      }
+      break;
+    //挑战!!挑战!!挑战!!
+    case "e011202":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($player->PS>0){
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }else{
+          $player->PC[5]=1;
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->PC[5]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+2;
+          $dienum=$dienum+rand(1,6);
+            if($dienum>=6)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=6){
+        $player->EC[11]=1;
+        if($PSM)
+          $player->PS=$player->PS+2;
+        scene("e011204");
+      }elseif($dienum>=4){
+        scene("e011205");
+      }elseif($dienum>=1){
+        scene("e011206");
+      }
+      }
+      break;
+
+    case "e011203":
+      switch($ch){
+        case 1:
+          scene("e011209");
+          break;
+       
+      }
+      break;
+
+    case "e011204":
+      switch($ch){
+        case 1:
+          scene("e011207");
+          break;
+       
+      }
+      break;
+
+    case "e011205":
+      switch($ch){
+        case 1:
+          scene("e011208");
+          break;
+       
+      }
+      break;
+
+    case "e011206":
+      switch($ch){
+        case 1:
+          scene("e011209");
+          break;
+       
+      }
+      break;
+
+    case "e011207":
+      switch($ch){
+        case 1:
+          scene("end");
+          break;
+       
+      }
+      break;
+
+    case "e011208":
+      switch($ch){
+        case 1:
+          scene("end");
+          break;
+       
+      }
+      break;
+
+    //挑战!!挑战!!挑战!!
+    case "e011209":
+      switch($ch){
+        case 1:
+          $dienum=0;
+          $dienum=rand(1,6);
+          break;
+        case 2:
+          if($player->PS>0){
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }else{
+          $player->PC[16]=1;
+            if($PSM)
+              $player->PS=$player->PS-1;
+          }
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+        case 3:
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $player->PC[16]=1;
+          if($PSM)
+            $player->PS=$player->PS-1;
+          $dienum=0;
+          $dienum=rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+2;
+          $dienum=$dienum+rand(1,6);
+            if($dienum>=5)
+              if($PSM)
+                $player->PS=$player->PS+1;
+          $dienum=$dienum+rand(1,6);
+          break;
+      }
+      {
+      if($PSM)
+        $player->LL=$dienum;
+      else
+        $dienum=$player->LL;
+      if($dienum>=5){
+        $player->EC[12]=1;
+        if($PSM)
+          $player->PS=$player->PS+2;
+        scene("e011210");
+      }elseif($dienum>=4){
+        scene("e011211");
+      }elseif($dienum>=1){
+        $player->PC[127]=1;
+        if($PSM)
+          $player->PS=$player->PS-2;
+        scene("e011212");
+      }
+      }
+      break;
+
+    case "e011210":
+      switch($ch){
+        case 1:
+          scene("e011213");
+          break;
+       
+      }
+      break;
+
+    case "e011211":
+      switch($ch){
+        case 1:
+          scene("e011213");
+          break;
+       
+      }
+      break;
+
+    case "e011212":
+      switch($ch){
+        case 1:
+          scene("e011213");
+          break;
+       
+      }
+      break;
+
+    case "e011213":
+      switch($ch){
+        case 1:
+          scene("end");
+          break;
+       
+      }
+      break;
+
+    case "e011214":
+      switch($ch){
+        case 1:
+          scene("end");
+          break;
+       
+      }
+      break;
+
+    case "e011215":
+      switch($ch){
+        case 1:
+          scene("end");
+          break;
+       
+      }
+      break;
+
+    case "end":
+      switch($ch){
+        case 1:
+          $player = new PlayerDEF;
+          $audioLink="/sound/e01010001.mp3";
+          $btnDisplay2="block";
+          $btnDisplay3="block";
+          $btnDisplay4="block";
+          $textInBtn1="没钱支付房租了";
+          $textInBtn2="陷入开发困难";
+          $textInBtn3="迷茫自己的未来";
+          $textInBtn4="为自己所做的担惊受怕";
+          $leadout="e010100";
+          break;
+       
+      }
+      break;
   
   
   
