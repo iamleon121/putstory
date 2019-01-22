@@ -7,6 +7,7 @@ $btnDisplay1="block";
 $btnDisplay2="none";
 $btnDisplay3="none";
 $btnDisplay4="none";
+$endbtn="none";
 $textInBtn1="";
 $textInBtn2="";
 $textInBtn3="";
@@ -90,8 +91,9 @@ setcookie("player", $_SESSION['player'], time()+3600*48);
 </div>
 <div class="w3-container w3-center" style="display: <?php echo $btnDisplay4 ?> "><p></p><a class="w3-btn-block w3-teal w3-card-2 w3-xlarge w3-round" onclick="loadscene('<?php echo $leadout ?>',4)"><?php echo $textInBtn4 ?></a>
 </div>
-<div style="max-width:400px" class="w3-container w3-teal w3-bottom w3-center">
-  
+<div class="w3-container w3-center" style="display:<?php echo $endbtn ?>"><p></p><a class="w3-btn-block w3-teal w3-card-2 w3-xlarge w3-round" href="?r=1">故事结束 感谢收听</a>
+</div>
+<div style="max-width:400px" class="w3-container w3-teal w3-bottom w3-center">  
   <h6>制作:Leon iamleon@yeah.net</h6>
 </div>
 

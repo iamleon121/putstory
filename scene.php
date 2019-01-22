@@ -2,7 +2,7 @@
 
 function scene($id){
 
-global $audioLink,$btnDisplay1,$btnDisplay2,$btnDisplay3,$btnDisplay4,$textInBtn1,$textInBtn2,$textInBtn3,$textInBtn4,$leadout,$player;
+global $audioLink,$btnDisplay1,$btnDisplay2,$btnDisplay3,$btnDisplay4,$textInBtn1,$textInBtn2,$textInBtn3,$textInBtn4,$endbtn,$leadout,$player;
 
 switch($id){
 
@@ -1530,7 +1530,7 @@ $btnDisplay2="block";
 if($player->PS>0)
 $btnDisplay3="block";
 $btnDisplay4="none";
-$textInBtn1="喊着莫的名";
+$textInBtn1="喊着莫的名字";
 $textInBtn2="喊着让莫快醒醒";
 $textInBtn3="喊着让莫别被控制";
 $textInBtn4="";
@@ -1616,17 +1616,18 @@ $leadout=$id;
 break;
 
 case "end":
-if($player->EC[11]||$player->EC[12])
+if($player->EC[11]==1||$player->EC[12]==1)
 $audioLink="/sound/e01end01.mp3";
 elseif($player->PC[17])
 $audioLink="/sound/e01end02.mp3";
 else
 $audioLink="/sound/e01end03.mp3";
-$btnDisplay1="block";
+$btnDisplay1="none";
 $btnDisplay2="none";
 $btnDisplay3="none";
 $btnDisplay4="none";
-$textInBtn1="故事结束 感谢您的收听";
+$endbtn="block";
+$textInBtn1="";
 $textInBtn2="";
 $textInBtn3="";
 $textInBtn4="";

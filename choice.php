@@ -1,6 +1,5 @@
 <?php
   include "scene.php";
-  include "playerclass.php";
   switch($leadin){
     //第一章 第一章 第一章 第一章 第一章 第一章
     case "begin":
@@ -1734,7 +1733,7 @@
       }elseif($dienum>=4){
         scene("e011211");
       }elseif($dienum>=1){
-        $player->PC[127]=1;
+        $player->PC[17]=1;
         if($PSM)
           $player->PS=$player->PS-2;
         scene("e011212");
@@ -1799,16 +1798,6 @@
     case "end":
       switch($ch){
         case 1:
-          $player = new PlayerDEF;
-          $audioLink="/sound/e01010001.mp3";
-          $btnDisplay2="block";
-          $btnDisplay3="block";
-          $btnDisplay4="block";
-          $textInBtn1="没钱支付房租了";
-          $textInBtn2="陷入开发困难";
-          $textInBtn3="迷茫自己的未来";
-          $textInBtn4="为自己所做的担惊受怕";
-          $leadout="e010100";
           break;
        
       }
