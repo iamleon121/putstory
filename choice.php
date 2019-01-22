@@ -317,7 +317,7 @@
         $player->PC[6]=1;
         if($PSM)
           $player->PS=$player->PS-1;
-        scene("e0100208");
+        scene("e010208");
       }
       }
       break;
