@@ -107,11 +107,9 @@
     case "e010106":
       switch($ch){
         case 1:
-          scene("e010201");
-          break;
-        case 2:
           scene("e010113");
           break;
+        
       }
       break;
 
@@ -131,11 +129,9 @@
     case "e010108":
       switch($ch){
         case 1:
-          scene("e010201");
-          break;
-        case 2:
           scene("e010113");
           break;
+        
       }
       break;
     //挑战!!挑战!!挑战!!
@@ -502,11 +498,11 @@
           break;
         case 2:
           if($player->EC[3]){
-            scene("e010318");
+            scene("e010319");
           }else{
             if($PSM)
               $player->PS=$player->PS-1;
-            scene("e010303");
+            scene("e010319");
           }
           break;
       }
@@ -976,7 +972,7 @@
         case 2:
           if($PSM)
             $player->PS=$player->PS-1;
-          scene("e010702");
+          scene("e010706");
           break;
       }
       break;
@@ -1756,7 +1752,7 @@
     case "e011211":
       switch($ch){
         case 1:
-          scene("e011213");
+          scene("e011214");
           break;
        
       }
@@ -1765,7 +1761,7 @@
     case "e011212":
       switch($ch){
         case 1:
-          scene("e011213");
+          scene("e011215");
           break;
        
       }
