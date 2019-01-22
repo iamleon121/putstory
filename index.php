@@ -42,7 +42,7 @@ setcookie("player", $_SESSION['player'], time()+3600*48);
 <!DOCTYPE html>
 <html>
 <head>
-<title>putstory E11</title>
+<title>PutStory 互动故事</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/lib/w325/w3.css">
 <script src="/lib/aj.js"></script>
@@ -62,11 +62,11 @@ setcookie("player", $_SESSION['player'], time()+3600*48);
 </div>
 
 <div class="w3-container">
-  <p>《代码疑云》是一部现代题材的原创有声互动故事，讲述了在信息社会时代下技术滥用的问题。</p>
+  <p>《代码疑云》是一部现代题材的原创有声互动故事，讲述了数据技术滥用造成的问题。故事时长约为90分钟，可随时退出，进度会保留48小时，在故事进行中时常会出现几个选项，按照你的心情和想法选择既可。</p>
 </div>
 
 <div class="w3-container">
-  <p>故事的进度会保留48小时，在故事进行中时常会出现几个选项，按照你的心情和想法选择既可。</p>
+  <p>如果你喜欢这类作品或有任何建议，请联系或留言给作者，新的故事之后会陆续推出，现有技术还存在很多瑕疵，将来也会逐步完善，感谢收听体验。</p>
 </div>
 
 <div class="w3-container">

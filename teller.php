@@ -92,7 +92,7 @@ setcookie("player", $_SESSION['player'], time()+3600*48);
 </div>
 <div style="max-width:400px" class="w3-container w3-teal w3-bottom w3-center">
   
-  <h6><?php echo $player->PS." " ?>制作:Leon iamleon@yeah.net</h6>
+  <h6>制作:Leon iamleon@yeah.net</h6>
 </div>
 
 

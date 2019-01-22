@@ -1,5 +1,6 @@
 <?php
   include "scene.php";
+  include "playerclass.php";
   switch($leadin){
     //第一章 第一章 第一章 第一章 第一章 第一章
     case "begin":
@@ -955,10 +956,10 @@
     case "e010701":
       switch($ch){
         case 1:
-          if($player->EC[6])
-            scene("e010702");
-          else
-            scene("e010703");
+            if($player->EC[6]==1||$player->PC[10]==1)
+              scene("e010703");
+            else
+              scene("e010702");
           break;
        
       }
@@ -1001,6 +1002,7 @@
       else
         $dienum=$player->LL;
       if($dienum>=3){
+        $player->PC[5]=1;
         scene("e010704");
       }elseif($dienum>=1){
         $player->PC[5]=1;

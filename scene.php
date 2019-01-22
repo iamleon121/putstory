@@ -879,7 +879,7 @@ break;
 
 case "e010702":
 $audioLink="/sound/e01070201.mp3";
-if($player->EC[6])
+if($player->PC[5])
 $audioLink="/sound/e01070202.mp3";
 $btnDisplay1="block";
 if($player->PS>0)
@@ -986,7 +986,7 @@ $btnDisplay1="block";
 $btnDisplay2="none";
 $btnDisplay3="none";
 $btnDisplay4="none";
-$textInBtn1="告诉艾文先生很快把算法交给他";
+$textInBtn1="告诉他很快把算法交给他";
 $textInBtn2="";
 $textInBtn3="";
 $textInBtn4="";
@@ -1360,7 +1360,7 @@ $textInBtn4="";
 $leadout=$id;
 break;
 
-case "e01112":
+case "e011112":
 $audioLink="/sound/e01111201.mp3";
 if($player->EC[9])
 $audioLink="/sound/e01111202.mp3";
